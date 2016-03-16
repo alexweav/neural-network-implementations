@@ -11,5 +11,5 @@ function a = evaluateNetwork(x, params)
   for i = 2:numLayers,
     a = tanh(params{i}*[ones(1, m);a]);
   end
-  a = a';
+  a = softmax(a', 2);
 end

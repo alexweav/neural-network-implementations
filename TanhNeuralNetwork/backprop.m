@@ -17,6 +17,7 @@ function grad = backprop(x, y, params, lambda)
     z{i} = (params{i}*[ones(1, m);a{i-1}'])';
     a{i} = tanh(z{i});
   end
+  a{numLayers} = softmax(a{numLayers}, 2);
   delta{numLayers} = a{numLayers} - y;
   for i = numLayers:-1:2,
     if i != numLayers,
