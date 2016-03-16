@@ -6,13 +6,13 @@
 #This script trains a logistic neural network with the MNIST dataset
 
 ######HYPERPARAMETERS#####
-eta = 0.06;
-lambda = 0.03;
-hiddenLayerSize = 700;
-batchsize = 1000;
+eta = 0.09;
+lambda = 0.04;
+hiddenLayerSize = 800;
+batchsize = 400;
 epochs = 6;
-#current best: eta = 0.06, lambda = 0.03, hiddenLayerSize = 700, batchsize = 1000, 50k examples, 8 epochs
-#validation percent error = 8.26%
+#current best: eta = 0.09, lambda = 0.04, hiddenLayerSize = 700, batchsize = 400, 50k examples, 6 epochs
+#validation percent error = 6.29%
 ##########################
 
 layers = [28*28;hiddenLayerSize;10];

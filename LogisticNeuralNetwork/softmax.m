@@ -1,3 +1,3 @@
-function y = softmax(x)
-  y = exp(x)./sum(exp(x));
+function y = softmax(x, dim)
+  y = exp(x)./sum(exp(x), dim);
 end
